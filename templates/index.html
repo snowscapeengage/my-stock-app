@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トップページ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>株式分析アプリ</h1>
+    <ul>
+        <li><a href="{{ url_for('portfolio') }}">📊 保有銘柄</a></li>
+        <li><a href="{{ url_for('stocks') }}">📈 銘柄リスト</a></li>
+        <li><a href="{{ url_for('valuation') }}">💰 理論株価分析</a></li>
+        <li><a href="{{ url_for('analysis') }}">🔍 企業分析</a></li>
+    </ul>
+</body>
+</html>

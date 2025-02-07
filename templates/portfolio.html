@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>保有銘柄 - 日本株銘柄選定アプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>保有銘柄</h1>
+    <nav>
+        <a href="/">トップページ</a> |
+        <a href="/stocks">銘柄リスト</a>
+    </nav>
+    <p>保有銘柄の情報を入力して、現在の株価と比較してみましょう。</p>
+    
+    <!-- 入力フォーム -->
+    <form method="post" action="/portfolio">
+        <label for="ticker">銘柄コード（例: 7203.T）:</label>
+        <input type="text" id="ticker" name="ticker" required>
+        <br>
+        <label for="acquisition_price">取得価格（円）:</label>
+        <input type="text" id="acquisition_price" name="acquisition_price" required>
+        <br>
+        <input type="submit" value="送信">
+    </form>
+
+    <!-- 計算結果の表示 -->
+    {% if result %}
+    <h2>結果</h2>
+    <p>銘柄: {{ result.ticker }}</p>
+    <p>取得価格: {{ result.acquisition_price }} 円</p>
+    <p>現在の株価: {{ result.current_price }} 円</p>
+    <p>損益率: {{ result.profit_loss | round(2) }} %</p>
+    {% endif %}
+</body>
+</html>

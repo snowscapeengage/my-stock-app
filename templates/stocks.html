@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>銘柄リスト - 日本株銘柄選定アプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>銘柄リスト</h1>
+    <nav>
+        <a href="/">トップページ</a> |
+        <a href="/portfolio">保有銘柄</a>
+    </nav>
+    <p>ここに条件に合致した銘柄をリスト表示します。</p>
+    
+    <!-- ここで渡されたデータを表示します -->
+    <h2>例：{{ ticker }} の現在の株価</h2>
+    <p>現在の株価は {{ price }} 円です。</p>
+</body>
+</html>
+<!-- stocks.html 内の適切な場所に -->
+{% if image_path %}
+    <h2>株価推移グラフ</h2>
+    <img src="{{ url_for('static', filename=image_path.split('static/')[1]) }}" alt="株価推移グラフ">
+{% endif %}

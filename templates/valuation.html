@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理論株価計算 - 日本株銘柄選定アプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>理論株価計算</h1>
+    <nav>
+        <ul>
+            <li><a href="/">トップページ</a></li>
+            <li><a href="/stocks">銘柄リスト</a></li>
+            <li><a href="/portfolio">保有銘柄</a></li>
+            <li><a href="/analysis">企業分析</a></li>
+            <li><a href="/valuation">理論株価計算</a></li>
+        </ul>
+    </nav>
+    <p>
+        以下のフォームに、各評価手法に必要な値を入力してください。<br>
+        ※ 割引率と成長率は小数で入力してください（例：10% → 0.10）<br>
+        ※ DCF法・DDM用の「初年度キャッシュフロー」「割引率」「成長率」「予測年数」は必須です。<br>
+        ※ 相対評価用の「PER」と「EPS」は任意です。
+    </p>
+    <form method="post" action="/valuation">
+        <fieldset>
+            <legend>DCF法・DDM用入力</legend>
+            <label for="cash_flow">初年度キャッシュフロー（円）:</label>
+            <input type="text" id="cash_flow" name="cash_flow" required><br>
+            <label for="discount_rate">割引率（例：0.10）:</label>
+            <input type="text" id="discount_rate" name="discount_rate" required><br>
+            <label for="growth_rate">成長率（例：0.05）:</label>
+            <input type="text" id="growth_rate" name="growth_rate" required><br>
+            <label for="years">予測年数（デフォルトは10年）:</label>
+            <input type="text" id="years" name="years">
+        </fieldset>
+        <fieldset>
+            <legend>相対評価用入力（オプション）</legend>
+            <label for="per">PER（株価収益率）:</label>
+            <input type="text" id="per" name="per"><br>
+            <label for="eps">EPS（1株あたり利益）:</label>
+            <input type="text" id="eps" name="eps"><br>
+        </fieldset>
+        <input type="submit" value="計算">
+    </form>
+
+    {% if results %}
+    <h2>📊 機械学習モデルの予測値</h2>
+    <p>モデルによる予測株価: <strong>{{ results.get('model_prediction', 'データなし') }}</strong></p>
+
+    <h2>📉 DCF・DDM・相対評価</h2>
+    <p>DCF法: {{ results.get('dcf', '未計算') }}</p>
+    <p>DDM法: {{ results.get('ddm', '未計算') }}</p>
+    <p>相対評価: {{ results.get('relative', '未計算') }}</p>
+    <p>加重平均理論株価: {{ results.get('weighted_average', '未計算') }}</p>
+    {% endif %}
+</body>
+</html>

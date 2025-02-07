@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ダッシュボード - 日本株銘柄選定アプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>ダッシュボード</h1>
+    <nav>
+        <ul>
+            <li><a href="/">トップページ</a></li>
+            <li><a href="/stocks">銘柄リスト</a></li>
+            <li><a href="/portfolio">保有銘柄</a></li>
+            <li><a href="/analysis">企業分析</a></li>
+            <li><a href="/valuation">理論株価計算</a></li>
+            <li><a href="/dashboard">ダッシュボード</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <h2>最新の株価情報</h2>
+        {% if stock_info %}
+            <p>銘柄: {{ stock_info.ticker }}</p>
+            <p>最新株価: {{ stock_info.current_price }} 円</p>
+            {% if stock_info.image_path %}
+                <img src="{{ url_for('static', filename=stock_info.image_path.split('static/')[1]) }}" alt="株価推移グラフ">
+            {% endif %}
+        {% else %}
+            <p>株価情報はありません。</p>
+        {% endif %}
+    </section>
+    
+    <section>
+        <h2>機械学習モデルの予測値</h2>
+        {% if model_prediction %}
+            <p>予測株価: {{ model_prediction }} 円</p>
+        {% else %}
+            <p>予測値は利用できません。</p>
+        {% endif %}
+    </section>
+    
+    <!-- 将来的なジョブの状況やログのサマリなども追加可能 -->
+    
+</body>
+</html>
