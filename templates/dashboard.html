@@ -15,10 +15,10 @@
             <li><a href="/portfolio">保有銘柄</a></li>
             <li><a href="/analysis">企業分析</a></li>
             <li><a href="/valuation">理論株価計算</a></li>
-            <li><a href="/dashboard">ダッシュボード</a></li>
+            <li><a href="/job_logs">ジョブログ</a></li>
         </ul>
     </nav>
-    
+
     <section>
         <h2>最新の株価情報</h2>
         {% if stock_info %}
@@ -31,7 +31,7 @@
             <p>株価情報はありません。</p>
         {% endif %}
     </section>
-    
+
     <section>
         <h2>機械学習モデルの予測値</h2>
         {% if model_prediction %}
@@ -40,8 +40,18 @@
             <p>予測値は利用できません。</p>
         {% endif %}
     </section>
+
+    <section>
+        <h2>最新のジョブログ（要約）</h2>
+        {% if job_logs %}
+            <pre>{{ job_logs }}</pre>
+        {% else %}
+            <p>ジョブログ情報はありません。</p>
+        {% endif %}
+    </section>
     
-    <!-- 将来的なジョブの状況やログのサマリなども追加可能 -->
-    
+    <footer>
+        <p>※ このダッシュボードはシステムの最新状況を表示します。</p>
+    </footer>
 </body>
 </html>

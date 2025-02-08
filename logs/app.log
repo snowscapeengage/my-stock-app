@@ -165,3 +165,71 @@
 2025-02-08 05:07:57,579 - INFO - Scheduler started
 2025-02-08 05:07:57,585 - WARNING -  * Debugger is active!
 2025-02-08 05:07:57,587 - INFO -  * Debugger PIN: 512-145-836
+2025-02-08 16:13:53,003 - INFO - ÉAÉvÉäÇ™ãNìÆÇµÇ‹ÇµÇΩÅB
+2025-02-08 16:13:54,608 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-08 16:13:54,608 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-08 16:13:54,609 - INFO - Added job "scheduled_data_fetch" to job store "default"
+2025-02-08 16:13:54,609 - INFO - Added job "scheduled_model_training" to job store "default"
+2025-02-08 16:13:54,610 - INFO - Scheduler started
+2025-02-08 16:13:54,647 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-08 16:13:54,647 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-08 16:13:54,648 - INFO -  * Restarting with stat
+2025-02-08 16:13:55,931 - INFO - ÉAÉvÉäÇ™ãNìÆÇµÇ‹ÇµÇΩÅB
+2025-02-08 16:13:56,648 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-08 16:13:56,648 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-08 16:13:56,649 - INFO - Added job "scheduled_data_fetch" to job store "default"
+2025-02-08 16:13:56,649 - INFO - Added job "scheduled_model_training" to job store "default"
+2025-02-08 16:13:56,649 - INFO - Scheduler started
+2025-02-08 16:13:56,657 - WARNING -  * Debugger is active!
+2025-02-08 16:13:56,691 - INFO -  * Debugger PIN: 145-967-995
+2025-02-08 16:14:15,316 - INFO - 127.0.0.1 - - [08/Feb/2025 16:14:15] "GET /dashboard HTTP/1.1" 200 -
+2025-02-08 16:14:15,434 - INFO - 127.0.0.1 - - [08/Feb/2025 16:14:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 16:14:15,436 - INFO - 127.0.0.1 - - [08/Feb/2025 16:14:15] "GET /static/images/7203.T_history.png HTTP/1.1" 200 -
+2025-02-08 16:14:15,495 - INFO - 127.0.0.1 - - [08/Feb/2025 16:14:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-08 16:15:34,411 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:34] "GET /job_logs HTTP/1.1" 200 -
+2025-02-08 16:15:34,452 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 16:15:43,910 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:43] "GET / HTTP/1.1" 200 -
+2025-02-08 16:15:43,954 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 16:15:50,907 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:50] "GET /valuation HTTP/1.1" 200 -
+2025-02-08 16:15:50,941 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 16:15:56,679 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:56] "GET /analysis HTTP/1.1" 200 -
+2025-02-08 16:15:56,710 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 16:15:58,353 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:58] "GET /portfolio HTTP/1.1" 200 -
+2025-02-08 16:15:58,399 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 16:15:59,975 - INFO - 127.0.0.1 - - [08/Feb/2025 16:15:59] "GET /stocks HTTP/1.1" 200 -
+2025-02-08 16:16:00,005 - INFO - 127.0.0.1 - - [08/Feb/2025 16:16:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 16:16:00,021 - INFO - 127.0.0.1 - - [08/Feb/2025 16:16:00] "GET /static/images/7203.T_history.png HTTP/1.1" 200 -
+2025-02-08 16:16:02,619 - INFO - 127.0.0.1 - - [08/Feb/2025 16:16:02] "GET / HTTP/1.1" 200 -
+2025-02-08 16:16:02,668 - INFO - 127.0.0.1 - - [08/Feb/2025 16:16:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 16:21:26,201 - INFO - 127.0.0.1 - - [08/Feb/2025 16:21:26] "GET /job_logs HTTP/1.1" 200 -
+2025-02-08 16:21:26,221 - INFO - 127.0.0.1 - - [08/Feb/2025 16:21:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 16:23:54,611 - INFO - Running job "scheduled_data_fetch (trigger: interval[0:10:00], next run at: 2025-02-08 16:23:54 JST)" (scheduled at 2025-02-08 16:23:54.608313+09:00)
+2025-02-08 16:23:56,652 - INFO - Running job "scheduled_data_fetch (trigger: interval[0:10:00], next run at: 2025-02-08 16:23:56 JST)" (scheduled at 2025-02-08 16:23:56.648399+09:00)
+2025-02-08 16:23:58,550 - INFO - ÉfÅ[É^é©ìÆéÊìæÉWÉáÉuÇ™ê≥èÌÇ…é¿çsÇ≥ÇÍÇ‹ÇµÇΩÅB
+2025-02-08 16:23:58,551 - INFO - Job "scheduled_data_fetch (trigger: interval[0:10:00], next run at: 2025-02-08 16:33:54 JST)" executed successfully
+2025-02-08 16:23:58,562 - INFO - ÉfÅ[É^é©ìÆéÊìæÉWÉáÉuÇ™ê≥èÌÇ…é¿çsÇ≥ÇÍÇ‹ÇµÇΩÅB
+2025-02-08 16:23:58,562 - INFO - Job "scheduled_data_fetch (trigger: interval[0:10:00], next run at: 2025-02-08 16:33:56 JST)" executed successfully
+2025-02-08 16:31:52,160 - INFO -  * Detected change in 'C:\\Users\\snows\\ÉAÉvÉääJî≠\\app.py', reloading
+2025-02-08 16:31:52,502 - INFO -  * Restarting with stat
+2025-02-08 16:31:53,410 - INFO - ÉAÉvÉäÇ™ãNìÆÇµÇ‹ÇµÇΩÅB
+2025-02-08 16:31:53,956 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-08 16:31:53,956 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-08 16:31:53,957 - INFO - Added job "scheduled_data_fetch" to job store "default"
+2025-02-08 16:31:53,957 - INFO - Added job "scheduled_model_training" to job store "default"
+2025-02-08 16:31:53,957 - INFO - Scheduler started
+2025-02-08 16:31:53,964 - WARNING -  * Debugger is active!
+2025-02-08 16:31:53,965 - INFO -  * Debugger PIN: 145-967-995
+2025-02-08 16:33:54,613 - INFO - Running job "scheduled_data_fetch (trigger: interval[0:10:00], next run at: 2025-02-08 16:43:54 JST)" (scheduled at 2025-02-08 16:33:54.608313+09:00)
+2025-02-08 16:33:56,519 - INFO - ÉfÅ[É^é©ìÆéÊìæÉWÉáÉuÇ™ê≥èÌÇ…é¿çsÇ≥ÇÍÇ‹ÇµÇΩÅB
+2025-02-08 16:33:56,519 - INFO - Job "scheduled_data_fetch (trigger: interval[0:10:00], next run at: 2025-02-08 16:43:54 JST)" executed successfully
+2025-02-08 16:34:10,390 - INFO -  * Detected change in 'C:\\Users\\snows\\ÉAÉvÉääJî≠\\app.py', reloading
+2025-02-08 16:34:10,608 - INFO -  * Restarting with stat
+2025-02-08 16:34:11,539 - INFO - ÉAÉvÉäÇ™ãNìÆÇµÇ‹ÇµÇΩÅB
+2025-02-08 16:34:12,089 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-08 16:34:12,089 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-08 16:34:12,089 - INFO - Added job "scheduled_data_fetch" to job store "default"
+2025-02-08 16:34:12,090 - INFO - Added job "scheduled_model_training" to job store "default"
+2025-02-08 16:34:12,090 - INFO - Scheduler started
+2025-02-08 16:34:12,096 - WARNING -  * Debugger is active!
+2025-02-08 16:34:12,097 - INFO -  * Debugger PIN: 145-967-995

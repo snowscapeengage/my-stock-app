@@ -180,7 +180,7 @@ def dashboard():
         }
     else:
         stock_info = None
-    
+
     # 機械学習モデルの予測値の取得
     try:
         model = joblib.load('stock_price_model.pkl')
@@ -188,8 +188,17 @@ def dashboard():
         model_prediction = model.predict(current_timestamp)[0]
     except Exception as e:
         model_prediction = "モデル予測エラー：" + str(e)
-    
-    return render_template('dashboard.html', stock_info=stock_info, model_prediction=model_prediction)
+
+    # ジョブログの読み込み（logs/app.log の最後の20行を表示）
+    try:
+        with open("logs/app.log", "r", encoding="cp932") as f:
+            lines = f.readlines()
+        job_logs = "".join(lines[-20:])  # 最後の20行を結合
+    except Exception as e:
+        job_logs = f"ジョブログの読み込みエラー: {e}"
+
+    return render_template('dashboard.html', stock_info=stock_info, model_prediction=model_prediction, job_logs=job_logs)
+
 
 # Flaskアプリの起動
 if __name__ == '__main__':
