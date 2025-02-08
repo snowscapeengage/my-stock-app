@@ -153,7 +153,7 @@ def scheduled_model_training():
 @app.route('/job_logs')
 def job_logs():
     try:
-        with open("logs/app.log", "r", encoding="utf-8") as f:
+        with open("logs/app.log", "r", encoding="cp932") as f:
             lines = f.readlines()
         log_content = "".join(lines[-20:])  # 最後の20行を表示
     except Exception as e:
