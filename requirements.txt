@@ -85,7 +85,7 @@ markupsafe==3.0.2
     #   -r requirements.in
     #   jinja2
     #   werkzeug
-matplotlib==3.10,<3.11
+matplotlib==3.9.4
     # via
     #   -r requirements.in
     #   seaborn
