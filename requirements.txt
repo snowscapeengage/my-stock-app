@@ -93,7 +93,7 @@ multitasking==0.0.11
     # via
     #   -r requirements.in
     #   yfinance
-numpy==2.2.2
+numpy==2.2.1
     # via
     #   -r requirements.in
     #   contourpy
