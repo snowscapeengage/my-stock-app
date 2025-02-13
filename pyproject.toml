@@ -1,0 +1,29 @@
+[project]
+name = "app-development"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "ユーザー名", email = "snowscapeengage@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flask (>=3.1.0,<4.0.0)",
+    "yfinance (>=0.2.52,<0.3.0)",
+    "apscheduler (>=3.11.0,<4.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "prometheus-client (>=0.21.1,<0.22.0)",
+    "psutil (>=6.1.1,<7.0.0)",
+    "joblib (>=1.4.2,<2.0.0)",
+    "numpy (>=2.0.2,<2.2.2)",      # 修正例: numpy>=2.2.2 は存在しないので、利用可能なバージョンに変更
+    "matplotlib (>=3.9.4,<3.10)"
+]
+packages = []   # ここを追加してプロジェクトのパッケージ化を無効にする
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.1"
+pytest = "^8.3.4"
