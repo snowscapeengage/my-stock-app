@@ -13,26 +13,29 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
+        # デフォルトはリポジトリのルートなので working-directory は省略可能ですが、明示的に指定する場合:
+        working-directory: .
+
       - name: Set up Python 3.13
         uses: actions/setup-python@v2
         with:
           python-version: '3.13'
-      
+        working-directory: .
+
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
         working-directory: .
-      
+
       - name: Install Poetry
         run: |
           curl -sSL https://install.python-poetry.org | python -
           echo "${HOME}/.local/bin" >> $GITHUB_PATH
         working-directory: .
-      
+
       - name: Install dependencies with Poetry
         run: poetry install --no-root
         working-directory: .
-      
+
       - name: Run flake8
         run: poetry run flake8 .
         working-directory: .
@@ -44,26 +47,28 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
+        working-directory: .
+
       - name: Set up Python 3.13
         uses: actions/setup-python@v2
         with:
           python-version: '3.13'
-      
+        working-directory: .
+
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
         working-directory: .
-      
+
       - name: Install Poetry
         run: |
           curl -sSL https://install.python-poetry.org | python -
           echo "${HOME}/.local/bin" >> $GITHUB_PATH
         working-directory: .
-      
+
       - name: Install dependencies with Poetry
         run: poetry install --no-root
         working-directory: .
-      
+
       - name: Run Unit Tests
         run: poetry run python -m unittest discover tests
         working-directory: .
